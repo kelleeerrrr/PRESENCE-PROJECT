@@ -1,63 +1,201 @@
-# PRESENCE: People Recognition and Energy-Saving Control Engine
+<h1 align="center">
+PRESENCE: People Recognition and Energy-Saving Control Engine
+</h1>
 
-A smart appliance controller simulation using real-time presence detection to automatically manage appliances like lights and air conditioning units. This project is implemented using Python, Tkinter, and OpenCV.
+<p align="center">
+A smart appliance controller simulation that uses <b>real-time presence detection</b> to automatically manage appliances such as lights and air conditioning units.
+</p>
 
-## 📌 Project Description
+<p align="center">
+Built using <b>Python</b>, <b>Tkinter</b>, and <b>OpenCV</b> to demonstrate energy-efficient automation.
+</p>
 
-**PRESENCE** is a simulation project designed for environmental awareness and energy efficiency. It detects the presence of people using a webcam and automatically toggles appliances on or off. If no presence is detected for a specific period, a warning is issued before the appliances are turned off. An admin panel allows for password-protected settings management, and the app logs daily appliance usage time with visual summaries.
+<p align="center">
+<img src="https://img.shields.io/badge/Python-3.x-blue?logo=python">
+<img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv">
+<img src="https://img.shields.io/badge/Tkinter-GUI-orange">
+<img src="https://img.shields.io/badge/Status-Completed-brightgreen">
+</p>
 
-## 🚀 Features
+---
 
-- Real-time camera feed with face and motion detection using OpenCV
-- Automatic appliance control:
-  - ON when presence is detected
-  - OFF after 15 seconds of no detection
-- Warning message before turning off appliances
-- Daily logging of appliance ON duration (CSV format)
-- Graphical summary of weekly appliance usage
-- Admin panel with password management
-- GUI designed using Tkinter
-- Image-based appliance simulation
+# 📌 Project Overview
 
-## 🛠 Tools & Technologies
+**PRESENCE** is a simulation-based smart appliance controller designed to promote **energy efficiency and environmental awareness**.
 
-- **Python 3.x**
-- **Tkinter** – GUI framework
-- **OpenCV** – Computer vision for face and motion detection
-- **Pillow** – Image handling for appliance icons
-- **Matplotlib** – Usage graph plotting
-- **CSV** – Activity log format
+The system uses a **webcam to detect human presence** through computer vision techniques. When a person is detected, appliances automatically turn **ON**. If no presence is detected for a certain period, the system issues a **warning notification** and eventually turns appliances **OFF** to conserve energy.
 
-## 🖼 GUI Layout
+The application also includes an **admin panel**, **activity logging**, and **weekly usage visualization** to help monitor appliance usage patterns.
 
-The interface includes:
+This project was developed as part of an **Environmental Science course project**.
 
-- Live camera feed display
-- Appliance icons that change based on ON/OFF state
-- Control buttons for admin login, settings, graph, and exit
-- Warning label when no presence is detected
+---
 
-## 🧠 Logic & Automation
+# 🚀 Key Features
 
-1. Start camera feed on launch
-2. Detect faces and/or motion in frames
-3. Turn appliances ON if presence is detected
-4. If no detection for 15 seconds:
-   - Display warning
-   - Turn appliances OFF if still undetected
-5. Log ON durations for each appliance daily
+| Feature | Description |
+|------|------|
+| 📷 Real-time Presence Detection | Uses OpenCV to detect faces and motion through a webcam |
+| 💡 Automatic Appliance Control | Appliances turn ON when a person is detected |
+| ⏱ Idle Timeout | Appliances turn OFF after 15 seconds of no detection |
+| ⚠ Warning System | Displays notification before turning appliances OFF |
+| 📊 Usage Analytics | Generates weekly usage graphs using Matplotlib |
+| 📁 Activity Logging | Records appliance ON duration in CSV format |
+| 🔐 Admin Panel | Password-protected settings management |
+| 🖥 GUI Interface | Built with Tkinter for a user-friendly interface |
 
-## 🔐 Admin Panel
+---
 
-- Password-protected access
-- Change current password
-- Reset password to default
-- Toggle camera and automation ON/OFF
+# 🛠 Technologies Used
 
-## 📊 Activity Logs & Reports
+| Technology | Purpose |
+|------|------|
+| **Python 3.x** | Core programming language |
+| **Tkinter** | Graphical User Interface |
+| **OpenCV** | Face and motion detection |
+| **Pillow** | Image handling for appliance icons |
+| **Matplotlib** | Data visualization for appliance usage |
+| **CSV** | Logging appliance activity data |
 
-- All ON durations are saved in `appliance_logs.csv`
-- 7-day summary graphs are generated using matplotlib for visual review of appliance use
+---
 
+# 🖼 Application Interface
 
+The graphical interface includes:
+
+- 📷 **Live Camera Feed**
+- 💡 **Appliance Icons** that change depending on ON/OFF status
+- ⚙ **Admin Controls** for settings and system management
+- ⚠ **Warning Indicator** when no presence is detected
+- 📊 **Graph Button** to view appliance usage analytics
+
+---
+
+# 🧠 System Logic
+
+The automation follows this workflow:
+
+1. Start webcam feed on application launch
+2. Detect faces and motion in camera frames
+3. If presence is detected:
+
+   * Turn appliances **ON**
+4. If no presence is detected for **15 seconds**:
+
+   * Display warning notification
+5. If absence continues:
+
+   * Turn appliances **OFF**
+6. Record appliance ON duration into the activity log
+
+---
+
+# 🔐 Admin Panel
+
+The admin panel allows users to manage system settings:
+
+* Password-protected access
+* Change current admin password
+* Reset password to default
+* Enable/disable camera detection
+* Enable/disable appliance automation
+
+---
+
+# 📊 Activity Logs & Reports
+
+Appliance usage is automatically tracked.
+
+**Data stored in:**
+
+```
+appliance_logs.csv
+```
+
+Logs include:
+
+* Date
+* Appliance name
+* Total ON duration
+
+The system generates a **7-day usage graph** using **Matplotlib** to help visualize energy consumption patterns.
+
+---
+
+# ▶️ How to Run the Project
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/PRESENCE.git
+cd PRESENCE
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+pip install opencv-python pillow matplotlib
+```
+
+### 3️⃣ Run the Program
+
+```bash
+python main.py
+```
+
+Make sure your **webcam is connected and accessible**.
+
+---
+
+# 📁 Project Structure
+
+```
+PRESENCE
+│
+├── main.py
+├── appliance_logs.csv
+├── icons/
+│   ├── light_on.png
+│   ├── light_off.png
+│   ├── ac_on.png
+│   └── ac_off.png
+│
+├── admin/
+│   └── admin_panel.py
+│
+└── graphs/
+    └── weekly_usage.py
+```
+
+---
+
+# 🌱 Significance of the Project
+
+This project demonstrates how **computer vision and automation** can contribute to **energy conservation**. By automatically controlling appliances based on human presence, unnecessary power consumption can be reduced.
+
+Although the project is a **simulation**, it presents a concept that could be expanded into real-world **smart home or smart building systems**.
+
+---
+
+# 👩‍💻 Author
+
+Developed as part of an **Environmental Sciences project** focusing on **technology-driven sustainability and smart energy solutions**.
+
+---
+
+# ⭐ Future Improvements
+
+Possible enhancements include:
+
+* Integration with **IoT hardware (Arduino / Raspberry Pi)**
+* Support for **multiple rooms or cameras**
+* Cloud-based usage analytics
+* Mobile application control
+* Machine learning-based presence recognition
+
+---
+
+# 📜 License
+
+This project is for **educational and research purposes**.
 
