@@ -189,13 +189,8 @@ Possible enhancements include:
 
 ---
 
-# 👩‍💻 Author
+# 🎓 Academic Project
 
 Developed as part of an **Environmental Sciences project** focusing on **technology-driven sustainability and smart energy solutions**.
 
----
-
-# 📜 License
-
-This project is for **educational and research purposes**.
 
