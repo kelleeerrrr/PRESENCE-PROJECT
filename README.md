@@ -177,12 +177,6 @@ Although the project is a **simulation**, it presents a concept that could be ex
 
 ---
 
-# 👩‍💻 Author
-
-Developed as part of an **Environmental Sciences project** focusing on **technology-driven sustainability and smart energy solutions**.
-
----
-
 # ⭐ Future Improvements
 
 Possible enhancements include:
@@ -192,6 +186,12 @@ Possible enhancements include:
 * Cloud-based usage analytics
 * Mobile application control
 * Machine learning-based presence recognition
+
+---
+
+# 👩‍💻 Author
+
+Developed as part of an **Environmental Sciences project** focusing on **technology-driven sustainability and smart energy solutions**.
 
 ---
 
